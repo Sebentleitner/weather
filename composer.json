@@ -1,0 +1,16 @@
+{
+    "name": "sebentleitner/weather",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Sebentleitner\\Weather\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sebentleitner",
+            "email": "sentleitner@schueler.hakzell.at"
+        }
+    ],
+    "require": {}
+}
