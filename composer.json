@@ -9,7 +9,8 @@
     "authors": [
         {
             "name": "sebentleitner",
-            "email": "sentleitner@schueler.hakzell.at"
+            "email": "sentleitner@schueler.hakzell.at",
+            "version": "1.0.0"
         }
     ],
     "require": {}
