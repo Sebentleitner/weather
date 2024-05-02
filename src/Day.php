@@ -5,7 +5,11 @@ namespace Sebentleitner\Weather;
 class Day
 {
     private string $weather ='';
-
+    /**
+     * Get the weather
+     *
+     * @return string weather
+     */
     public function getWeather(): string
     {
         return $this->weather;
