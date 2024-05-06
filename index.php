@@ -6,30 +6,26 @@ require 'vendor/autoload.php';
 use Sebentleitner\Weather\Day;
 use Sebentleitner\Weather\History;
 
-//Create History
+//History erstellen
 $history = new History();
 
-//Add Days
-$day1 = new Day('Sonnig');
-$history->addDay($day1, '2024-04-28');
+//Days erstellen und Weather & Date hinzufügen
+$day1 = new Day("sonnig", "2024-05-05");
+$day2 = new Day("schneefall", "2024-05-06");
+$day3 = new Day("bewölkt", "2024-05-07");
 
-$day2 = new Day('Schnee');
-$history->addDay($day2, '2024-04-29');
+$history->AddDay($day1);
+$history->AddDay($day2);
+$history->AddDay($day3);
 
-$day3 = new Day('Bewölkt');
-$history->addDay($day3, '2024-04-30');
+// Wetter abrufen
+$dateSearch = "2024-05-06";
+$weather = $history->getWeather($dateSearch);
 
-//Weather - Date
-$dateWeather = '2024-04-30';
-$weather = $history->getWeather($dateWeather);
+echo "Das Wetter am $dateSearch war: $weather";
 
-if ($weather !== null) {
-    echo "Am $dateWeather war das Wetter: $weather";
-}
 
-else {
-    echo "Das Wetter für den $dateWeather ist nicht verfügbar.";
-}
+
 
 
 
